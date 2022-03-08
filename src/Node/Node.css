@@ -1,0 +1,71 @@
+.node {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid lightskyblue;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.node-finish {
+  border-left: 10.5px solid transparent;
+  border-right: 10.5px solid transparent;
+  border-bottom: 25px solid red;
+  width: 0px;
+  height: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  outline: 0px;
+
+}
+
+.node-start {
+  background-color: green;
+  border-radius: 60%;
+  width: 21px;
+  margin-left: 2px;
+  margin-right: 2px;
+
+}
+
+.node-visited {
+  animation-name: visitedAnimation;
+  background-color: #58b6ff;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+
+@keyframes visitedAnimation {
+  0%{
+    transform: scale(.3);
+    background-color: rgba(0,0,66,.75);
+    border-radius: 100%;
+  }
+
+  50%{
+    background-color: rgba(17, 104, 217, .75);
+
+  }
+
+  75%{
+    transform: scale(1.2);
+    background-color: rgba(0,217,159,.75);
+
+  }
+
+  100%{
+    transform: scale(1);
+    background-color: rgba(0,190,218,.75);
+  }
+}
+.node-shortest-path {
+  background-color: yellow;
+}
+.node-wall{
+  background-color: black;
+  transition: background-color .05s ease-in;
+
+}
